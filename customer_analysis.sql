@@ -43,13 +43,13 @@ order by AvgDaysDiff asc;
 --Differentiate the repeat vs one-time customers
 
 with tmp as (
-			select case when TotalInvoices = 1 then "One-time" else "Repeat" end as CustType, CustomerId
-			from (
-					select CustomerId , count(InvoiceId) as TotalInvoices
-					from Invoice i
-					group by i.CustomerId
-				  ) 
-			)
+select case when TotalInvoices = 1 then "One-time" else "Repeat" end as CustType, CustomerId
+from (
+select CustomerId , count(InvoiceId) as TotalInvoices
+from Invoice i
+group by i.CustomerId
+)
+)
 select CustType, count(CustType) as NumCust
 from tmp
 order by CustType asc;
