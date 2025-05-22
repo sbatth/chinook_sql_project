@@ -1,55 +1,103 @@
---Find the top 10 customers that have spent the most money on purchases and the number of invoices (transactions)
 
-select c.FirstName || " " ||c.LastName as Name , c.Country ,count(distinct InvoiceId) as TotalInvoices, 
-round(sum(Total),2) as TotalSales
-from Invoice i LEFT JOIN Customer c
-on i.CustomerId = c.CustomerId
-group by i.CustomerId
-order by sum(Total) desc
-limit 10;
+-- Top 10 customers that have spent the most money on purchases and the number of invoices (transactions)
+SELECT 
+    c.CustomerId,
+    c.FirstName || ' ' || c.LastName AS Name,
+    c.Country,
+    COUNT(DISTINCT i.InvoiceId) AS TotalInvoices,
+    ROUND(SUM(i.Total), 2) AS TotalAmount
+FROM 
+    Invoice i
+LEFT JOIN 
+    Customer c ON i.CustomerId = c.CustomerId
+GROUP BY 
+    i.CustomerId
+ORDER BY 
+    TotalAmount DESC
+LIMIT 10;
 
---Get the earliest date of a customer's purchase to identify most loyal customers
 
-select c.FirstName || " " || c.LastName as Name, InvoiceDate 
-from
-	(
-	select CustomerId, InvoiceDate, 	
-	--gets the earliest order date
-	row_number() over(partition by CustomerId order by InvoiceDate) as rn 
-	from Invoice i
-	) e, Customer c 
-where rn=1 and e.CustomerId = c.CustomerId
-order by InvoiceDate asc;
+-- Get the earliest date of a customer's purchase to identify most loyal customers
 
---Get the avg lag days between orders of each cutomer and find the customers that buys most frequently 
-select a.CustomerId, FirstName || ' ' || LastName as Name,round(avg(DaysDiff), 2) as AvgDaysDiff
-from (
-		--julianday function is used in SQLite to get difference between two dates
-		--this subquery will get days between two orders for each customer
-		select CustomerId, julianday(InvoiceDate) - julianday(PrevDate) as DaysDiff
-		from 
-			(
-			select CustomerId , InvoiceDate ,
-			--window function attaches the previous order date to each record
-			lag(InvoiceDate) over (partition by CustomerId order by InvoiceDate asc) as PrevDate
-			from Invoice i
-			)
-		where DaysDiff is not null
-		) a, Customer c 
-where a.CustomerId = c.CustomerId
-group by a.CustomerId 
-order by AvgDaysDiff asc;
+SELECT 
+	c.CustomerId,
+    c.FirstName || ' ' || c.LastName AS Name,
+    InvoiceDate 
+FROM (
+    SELECT 
+        CustomerId, 
+        InvoiceDate,
+        -- gets the earliest order date
+        ROW_NUMBER() OVER (PARTITION BY CustomerId ORDER BY InvoiceDate) AS rn 
+    FROM 
+        Invoice i
+) e,
+Customer c 
+WHERE 
+    rn = 1 
+    AND e.CustomerId = c.CustomerId
+ORDER BY 
+    InvoiceDate ASC;
 
---Differentiate the repeat vs one-time customers
 
-with tmp as (
-			select case when TotalInvoices = 1 then "One-time" else "Repeat" end as CustType, CustomerId
-			from (
-					select CustomerId , count(InvoiceId) as TotalInvoices
-					from Invoice i
-					group by i.CustomerId
-				  ) 
-			)
-select CustType, count(CustType) as NumCust
-from tmp
-order by CustType asc;
+
+-- Get the avg days between orders of each customer and find the customers that buy most frequently 
+
+SELECT 
+    a.CustomerId,
+    FirstName || ' ' || LastName AS Name,
+    CAST(AVG(DaysDiff) AS INT) AS AvgDaysDiff
+FROM (
+    -- this subquery will get days between two orders for each customer
+    SELECT 
+        CustomerId, 
+            -- julianday function is used in SQLite to get difference between two dates
+        JULIANDAY(InvoiceDate) - JULIANDAY(PrevDate) AS DaysDiff
+    FROM (
+        SELECT 
+            CustomerId,
+            InvoiceDate,
+            -- window function attaches the previous order date to each record
+            LAG(InvoiceDate) OVER (PARTITION BY CustomerId ORDER BY InvoiceDate ASC) AS PrevDate
+        FROM 
+            Invoice i
+    )
+    WHERE 
+        DaysDiff IS NOT NULL
+) a,
+Customer c 
+WHERE 
+    a.CustomerId = c.CustomerId
+GROUP BY 
+    a.CustomerId 
+ORDER BY 
+    AvgDaysDiff ASC;
+
+
+
+-- Differentiate the repeat vs one-time customers
+
+WITH tmp AS (
+    SELECT 
+        CASE 
+            WHEN TotalInvoices = 1 THEN 'One-time'
+            ELSE 'Repeat'
+        END AS CustType,
+        CustomerId
+    FROM (
+        SELECT 
+            CustomerId,
+            COUNT(InvoiceId) AS TotalInvoices
+        FROM 
+            Invoice i
+        GROUP BY 
+            i.CustomerId
+    )
+)
+SELECT 
+    CustType, 
+    COUNT(CustType) AS NumCust
+FROM 
+    tmp
+ORDER BY 
+    CustType ASC;
