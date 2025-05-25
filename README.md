@@ -1,6 +1,6 @@
 # Analyzing Chinook Database- SQL Project
 
-For the full write-up of the project including project overview, analysis description, and recommendations, please visit my [LinkedIn article]().
+For the full write-up of the project including project overview, analysis description, and recommendations, please visit my [LinkedIn article](https://www.linkedin.com/pulse/analyzing-chinook-database-sql-project-sehaj-batth-qfklc/).
 
 If you like this project, follow me on [LinkedIn](https://www.linkedin.com/in/harsehaj-batth/) for more.
 
