@@ -44,8 +44,10 @@ The project analyzes the top-spending customers first and identifies other inter
 
 - Finding the top 10 customers by Total Sales Amount.
 
-[SQL Query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L2-L17) to pull the Top 10 spending customers and the number of invoices (transactions) shows
+[SQL Query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L2-L17)
 
+
+Result
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20150425.png)
 
 *Even the customer generating the most amount of revenue only had 7 total invoices and $49.62 in lifetime spend*. This indicates that the CLV (Customer Lifetime Value) for the business is low.
@@ -53,7 +55,9 @@ The project analyzes the top-spending customers first and identifies other inter
 
 - Finding the frequency of customer purchases
 
-The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L44-L74) gives
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L44-L74)
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20152340.png)
 
@@ -62,7 +66,9 @@ The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer
 
 - Finding repeat customers
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L78-L103) is
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L78-L103)
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20152703.png)
 
@@ -74,7 +80,9 @@ After the customer analysis, the data was analyzed for revenue trends.
 
 - Identifying seasonal and yearly revenue trends
 
-The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L1-L22) outputs
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L1-L22) 
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20153817.png)
 
@@ -85,7 +93,9 @@ The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_
 
 - Finding which countries are responsible for the most sales
 
-[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L25-L41) to find countries with more than 25 invoices gives
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L25-L41) to pull countries with more than 25 orders 
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20154617.png)
 
@@ -94,7 +104,9 @@ The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_
 
 - Finding the average order value (AOV) by country
 
-[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L44-L61) to pull the AOV for each country and filtering countries with above average AOVs gives
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L44-L61) to pull the AOV for each country and filtering countries with above average AOVs
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20161620.png)
 
@@ -103,7 +115,9 @@ The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_
 
 - Analyzing if cheaper tracks sell more
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L64-L98) is
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L64-L98) 
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20155159.png)
 
@@ -112,7 +126,9 @@ The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob
 
 - Which genres have the most tracks?
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L58-L93) shows
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L58-L93) 
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20162325.png)
 
@@ -121,7 +137,9 @@ The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob
 
 - Which albums have the highest revenue?
 
-[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L96-L113) outputs the following
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L96-L113)
+
+Result
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20162608.png)
 
