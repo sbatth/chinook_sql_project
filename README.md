@@ -30,7 +30,7 @@ The data for the Chinook store can be found at the official [GitHub page](https:
 
 The database includes several tables with information on *Invoices, Customers, and Tracks*.
 
-![img](https://private-user-images.githubusercontent.com/147944185/448598127-61f09142-66eb-4283-a37e-18422d6a4f54.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg2MjgsIm5iZiI6MTc0ODQ4ODMyOCwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NTk4MTI3LTYxZjA5MTQyLTY2ZWItNDI4My1hMzdlLTE4NDIyZDZhNGY1NC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzEyMDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05MTgyNTQ5OGI1MmJjNWU3ZmNhZmY2NjI3NTYzNzAzOTkxZGZjMzEzZGQ1MmQ4ZjQzZTQzOTcxYjgyM2E2OTViJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.gABUYC5ypnAEKMrsMCH7pw91eaZ8gEfVg2IyNhpaJ6w)
+![img](https://github.com/sbatth/images/blob/main/sql/ERD.png)
 
 ### Tools
 
@@ -44,27 +44,27 @@ The project analyzes the top-spending customers first and identifies other inter
 
 - Finding the top 10 customers by Total Sales Amount.
 
-[SQL Query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L2-L17) to pull the Top 10 spending customers and the number of invoices (transactions).
+[SQL Query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L2-L17) to pull the Top 10 spending customers and the number of invoices (transactions) shows
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600853-b57b455d-03c3-4175-8288-09f46c513e98.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg2MjksIm5iZiI6MTc0ODQ4ODMyOSwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODUzLWI1N2I0NTVkLTAzYzMtNDE3NS04Mjg4LTA5ZjQ2YzUxM2U5OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzEyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lMzk3OTg3OWNjZTFhZjFhZmIyYTk5NTcwMGU0ZTRlNWI1OGI3NTEzMzkxNmE3NmMyYTNlZjcyN2Q3NDM0MjE3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.4hS4ysiivHzpbMpvWDKXV6FVOT61lNL8-3sTriaHURw)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20150425.png)
 
 *Even the customer generating the most amount of revenue only had 7 total invoices and $49.62 in lifetime spend*. This indicates that the CLV (Customer Lifetime Value) for the business is low.
 
 
 - Finding the frequency of customer purchases
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L44-L74)
+The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L44-L74) gives
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600860-40a7a203-0f4f-49bf-9cea-86c1129468ca.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg2MjksIm5iZiI6MTc0ODQ4ODMyOSwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODYwLTQwYTdhMjAzLTBmNGYtNDliZi05Y2VhLTg2YzExMjk0NjhjYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzEyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMWZlYWI1MGEyOTM2MDVlY2MxN2IyNTI1MGYzZWFlZGZiMzRiN2Y4Mzg1MDY2ODY0Njg2NWNiYjc4YTFlOGI0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.RPo_P-X8XR3JJhvgUHNscuvdS_xGrEg2jQDrDNFh0Gc)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20152340.png)
 
 *Even the most frequent customers had an average gap of 207 days between their orders*. This can indicate that the business is failing to engage the customers frequently.
 
 
 - Finding repeat customers
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L78-L103)
+The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L78-L103) is
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600859-a6b0b1b1-45b6-484c-aa2c-d0ba207ae163.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg2MjksIm5iZiI6MTc0ODQ4ODMyOSwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODU5LWE2YjBiMWIxLTQ1YjYtNDg0Yy1hYTJjLWQwYmEyMDdhZTE2My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzEyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05ZGY3ZjA4NTNkY2UxODE4MDVhMDlhOTQzNjU4MjE0ZjI0OTg5MWViNWUxMzViMzI2MmU0N2MyNjlhYmFjZGFlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1r_ALfLhg8y6GpHbE17jqCAGYcrxuVR_nWuSW75Ot6E)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20152703.png)
 
 *100% of the customers of the store were repeat customers*. This indicates that the customer retention is high and there is low risk of churn. On the other hand, the acquisition of new customers is slow.
 
@@ -74,56 +74,56 @@ After the customer analysis, the data was analyzed for revenue trends.
 
 - Identifying seasonal and yearly revenue trends
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L1-L22)
+The [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L1-L22) outputs
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600861-b7c790c4-f5fb-413e-a676-4e62f8e80a28.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg2MjksIm5iZiI6MTc0ODQ4ODMyOSwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODYxLWI3Yzc5MGM0LWY1ZmItNDEzZS1hNjc2LTRlNjJmOGU4MGEyOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzEyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hZGQ0Yzc0ZDFlNzRiMmQ3YjczOTBiOTcwZDFmNDRiNzhiNTRiZGYzZTM1ZjM3MWE1M2QyZjRiNDdjNTYwMjNkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.tjaZuV0y4ypR_RWEOwQ8PmkfJFZGJ3wUPKBd0jKv9cU)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20153817.png)
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600852-678c86d1-73c3-4b5f-bf81-7718f0c9fd9e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg2MjksIm5iZiI6MTc0ODQ4ODMyOSwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODUyLTY3OGM4NmQxLTczYzMtNGI1Zi1iZjgxLTc3MThmMGM5ZmQ5ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzEyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wNGY3ZWI1MmQ2ZDM4N2EzYzMxYTdhZjZlNTBhNmQyMjc4NGY4MGQ4YzI4NWE1ZjExOTVjMGE3MTM4OGVmZWJiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.AF4qYcItPObzqvZPloNQqVMHltGQM66mKg-excGJFNE)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20153833.png)
 
 *There were no significant trends seen in the monthly and yearly revenue analysis*. This is indicative of lack of capitalization on seasonal demands.
 
 
 - Finding which countries are responsible for the most sales
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L25-L41) to find countries with more than 25 invoices
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L25-L41) to find countries with more than 25 invoices gives
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600855-178441d6-27aa-4fb2-a5fc-5fca22a5459b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg2MjksIm5iZiI6MTc0ODQ4ODMyOSwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODU1LTE3ODQ0MWQ2LTI3YWEtNGZiMi1hNWZjLTVmY2EyMmE1NDU5Yi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzEyMDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wNDYxMTQ0ODljNGY3MTE3NjhiODI0NjE2NmI1MmJkYmYwY2I1ZTY3YTFhNDU5Mzg1ZjNhMDg5MTY3ZGMyYzBiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.8JYCQesCnGiKyO7P_UHVS73rHtadrxbWi1iDLg8gvFE)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20154617.png)
 
 *The top 5 countries by total revenue were USA, Canada, France, Brazil, and Germany.*
 
 
 - Finding the average order value (AOV) by country
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L44-L61) to pull the AOV for each country and filtering countries with above average AOVs
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L44-L61) to pull the AOV for each country and filtering countries with above average AOVs gives
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600854-36081a0e-a897-484b-9685-88acf7ada4b6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg4ODAsIm5iZiI6MTc0ODQ4ODU4MCwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODU0LTM2MDgxYTBlLWE4OTctNDg0Yi05Njg1LTg4YWNmN2FkYTRiNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzE2MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNjE2MGNlNmYyZDBkMTdiYTM3YjY4OGRkMmJmOGYzNjY1NWIxNWZhOWY5YzEwZmFkMmVjZTlhZDg2ZGZkNGExJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.xq1pzNk_7s7mMvzYbjyroEatEmdkv5ZN9W5nhM8fNIw)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20161620.png)
 
 *Despite not being in the Top 5 by total revenue, Chile, Ireland, and Hungary had the highest AOV.*
 
 
 - Analyzing if cheaper tracks sell more
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L64-L98)
+The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L64-L98) is
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600856-add4bb95-5161-4c73-8801-42f99d330ff6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg4ODAsIm5iZiI6MTc0ODQ4ODU4MCwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODU2LWFkZDRiYjk1LTUxNjEtNGM3My04ODAxLTQyZjk5ZDMzMGZmNi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzE2MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NTI5NGRhMzljYWNkYmIzOTBjY2NiNDk5MWQ3NzYzYmRiM2JlNGQ5YzcxNWY3YzRkZGQwYWQxZjM2ZmIyMzIxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.X0Y_NT6MiwcnBXIMvIwpcvg1GhnS8pVJ7D1-qu1_2Rg)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20155159.png)
 
 *Of all the tracks at $0.99, 57% had at least one sale whereas of all the tracks priced at $1.99, only 48% had at least one sale*. Out of the two price categories, the tracks that were cheaper sold more. There is a price sensitivity component to sales.
 
 
 - Which genres have the most tracks?
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L58-L93)
+The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L58-L93) shows
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600862-0fa83e73-8da6-4f24-9b0b-4ed5fbe8b282.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg4ODAsIm5iZiI6MTc0ODQ4ODU4MCwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODYyLTBmYTgzZTczLThkYTYtNGYyNC05YjBiLTRlZDVmYmU4YjI4Mi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzE2MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02NmZmY2E3MDM4YWU4MjM0YThiZmJkNzlkYjc0NzRlZGUzODZhYTczMGFlNTFkNjczNDcwZmVlMzI1ZmU2OTc1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.ypHBPwM7aby3eiu7SKpeSmcssQ9F1tUmRbSiq5oZv3k)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20162325.png)
 
 *The genre Rock has the most number of total tracks and the most number of sold tracks.*
 
 
 - Which albums have the highest revenue?
 
-The output of the [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L96-L113)
+[SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L96-L113) outputs the following
 
-![img](https://private-user-images.githubusercontent.com/147944185/448600858-ceb328b7-73fd-4b5d-9801-a62a748473e8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg0ODg4ODAsIm5iZiI6MTc0ODQ4ODU4MCwicGF0aCI6Ii8xNDc5NDQxODUvNDQ4NjAwODU4LWNlYjMyOGI3LTczZmQtNGI1ZC05ODAxLWE2MmE3NDg0NzNlOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyOVQwMzE2MjBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yNGI4ZWZmMTc4ZDM3NTk1Y2JlMjFmYzczZGQzMWJjNmI3MGYzZWNjYTRiNWY4M2ZmYzI0ZDY5OTZmMTI5Zjk4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.7bvKnQq-xX7qjqQv-mi-bXOfHYagakDIeBODpNbW314)
+![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20162608.png)
 
 *Battlestar Galactica (Classic), Season 1 generated the most revenue and included video files instead of the more prevalent audio files in the store.*
 
