@@ -47,7 +47,8 @@ The project analyzes the top-spending customers first and identifies other inter
 [SQL Query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L2-L17)
 
 
-Result
+Result:
+
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20150425.png)
 
 *Even the customer generating the most amount of revenue only had 7 total invoices and $49.62 in lifetime spend*. This indicates that the CLV (Customer Lifetime Value) for the business is low.
@@ -57,7 +58,7 @@ Result
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L44-L74)
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20152340.png)
 
@@ -68,7 +69,7 @@ Result
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/customer_analysis.sql#L78-L103)
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20152703.png)
 
@@ -82,7 +83,7 @@ After the customer analysis, the data was analyzed for revenue trends.
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L1-L22) 
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20153817.png)
 
@@ -95,7 +96,7 @@ Result
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L25-L41) to pull countries with more than 25 orders 
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20154617.png)
 
@@ -106,7 +107,7 @@ Result
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L44-L61) to pull the AOV for each country and filtering countries with above average AOVs
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20161620.png)
 
@@ -117,7 +118,7 @@ Result
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/revenue_trends.sql#L64-L98) 
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20155159.png)
 
@@ -128,7 +129,7 @@ Result
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L58-L93) 
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20162325.png)
 
@@ -139,7 +140,7 @@ Result
 
 [SQL query](https://github.com/sbatth/chinook_sql_project/blob/main/other_trends.sql#L96-L113)
 
-Result
+Result:
 
 ![img](https://github.com/sbatth/images/blob/main/sql/Screenshot%202025-05-22%20162608.png)
 
